@@ -1,0 +1,414 @@
+// Your custom SCSS should be written here...
+
+@import '../bower_components/gumby-parallax/_parallax.scss';
+/*@import "compass/typography/lists/bullets"*/
+
+* {
+    /*background: rgba(0,0,0,.05);*/
+}
+
+// Modular Scale Settings
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale
+
+body {
+    font-size: 16px;
+}
+
+.inside_the_body{
+    font-size: .4em;
+}
+
+
+$ratio: golden();                       // Ratio for Modular Scale
+$base-font-size: 16px !default;
+$importantNum: 78px !default;
+$base-size: $base-font-size $importantNum;
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+/*.mini-para {
+    @include font-size($med);
+}
+
+.mini-title {
+  @include font-size($large);
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+*/
+/*h1 {
+    font-size: 250%;
+}
+
+h2 {
+    font-size: 200%;
+}*/
+
+/*h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+    font-family: "Open Sans";
+    font-weight: 300;
+    line-height: 1.15538em;
+    padding-bottom: 0.273em;
+    padding-top: 0.273em;
+    text-rendering: optimizelegibility;
+    font-size: 2.0em;
+}*/
+
+br {
+    line-height: 0.8em;
+}
+
+.bulletLeft {
+    background-image: url(/img/logo/bullet3.png);
+    background-repeat: no-repeat;
+    /*background-position: 0px 5px;*/
+    padding-left: 20px;
+}
+
+.bulletRight {
+    background-image: url(/img/logo/bullet3.png);
+    background-repeat: no-repeat;
+    /*background-position: 0px 5px;*/
+    padding-left: 20px;
+    float: right;
+}
+
+html {
+    /*line-height: 0.8em;*/
+    /*height: 2000px;*/
+}
+
+img {
+    float: left;
+    margin-left: 0px;
+    
+}
+.columns {
+    width: 80%;
+}
+
+.container {
+   background-image: url(/img/body/bg.jpg);
+   /*@include row();*/
+   width: 100%;
+}
+
+.margins {
+    background: rgba(255,255,255,.15);
+    margin: 100px auto 40px;
+    border-radius: 30px;
+    padding: 30px;
+    article {
+        background: #fff;
+        height: auto;
+        border-radius: 20px;
+        padding: 60px;
+        text-align: left;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625em;
+    margin-bottom: 13px;
+    /*@include font-size($med);
+    line-height: 1.0em;*/
+}
+
+.panel {
+    padding-top: 0px;
+    margin-top: auto;/*auto*/
+    color: blue;
+    
+}
+.parallax {
+    /*background: url(../img/professionals.png) no-repeat;*/
+    background: url(/img/parallax/green.jpg) no-repeat;
+    background-size: cover;
+    height: 400px;
+        &#home {
+            background: url(/img/parallax/green.jpg);
+            background-size: cover;
+        }
+        &#content-marketing-services {
+            background: url(/img/parallax/content1.jpg);
+            background-size: cover;
+        }
+        &#about {
+            background: url(/img/parallax/about-us1.jpg);
+            background-size: cover;
+        }
+        &#portfolio {
+            background: url(/img/parallax/professionals.png);
+            background-size: cover;
+        }
+        &#keyword {
+            background: url(/img/parallax/keyword1.jpg);
+            background-size: cover;
+        }
+        &#email {
+            background: url(/img/parallax/email-marketing.jpg);
+            background-size: cover;
+        }
+        &#audit {
+            background: url(/img/parallax/audit1.jpg);
+            background-size: cover;
+        }
+        &#linkedin {
+            background: url(/img/parallax/linkedin8.jpg);
+            background-size: cover;
+        }    
+        &#contact {
+            /*background: url(/home/plenty/images/claire/parallax/contact1.png);*/
+            background: url(/img/parallax/contact4.png);
+            background-size: cover;    
+        }
+}
+
+.row {
+    width: 80%;
+    row-max-width: 80%;
+    padding-top: 0px;
+}
+
+section {
+  @include row();
+  /*padding: 0px;
+  margin: 0px;*/
+}
+article {
+  /*@include column(8);*/
+  @include row();
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+ul .home {
+    background-image: url(sqpurple.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    padding-left: 14px;
+}
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+.panes{
+    list-style:none;
+    position:relative;
+    width:500%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+        
+    -moz-animation:carousel 90s infinite;
+    -webkit-animation:carousel 90s infinite;
+    animation:carousel 90s infinite;
+}
+.panes > li{
+    position:relative;
+    float:left;
+    width:20%; /* 100 / number of panes */
+}
+.carousel img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+.carousel h2{
+    font-size:1em;
+    padding:0.5em;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    text-align:right;
+    color:#fff;
+    background-color:rgba(0,0,0,0.75);
+}
+
+@-moz-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@-webkit-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+/*------------------------------------*\
+    $TESTIMONIAL
+\*------------------------------------*/
+
+.testimonial {
+    height: 270px;
+    padding: 0px;
+    padding-top: 0px;
+    border: 0px;
+    margin:0px;
+    background-color: rgba(0,0,0,.05);
+}
+
+/*------------------------------------*\
+    $PORTFOLIO
+\*------------------------------------*/
+
+.columnLeft {
+    margin: 0px;
+    padding-left: 0px;
+    float: left;
+    ;
+}
+
+.columnRight {
+    float: right;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.portImg {
+    width: 180px;
+    height: 150px;
+    border: solid medium grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* -- social media -- */
+a.socialMedia {width:42px;height:42px;padding:8; float:left; margin:0 10px 10px 0; }
+a.linkedIn {width:42px; height:42px; background:url(file:///home/plenty/www/claire/asset/socialMediaCust/LinkedIn.png) top no-repeat;}
+a:hover.linkedIn {background:url(file:///home/plenty/www/claire/asset/socialMediaCust/LinkedInOver.png) top no-repeat;}
+a.Twitter {width:42px; height:42px; background:url(file:///home/plenty/www/claire/asset/socialMediaCust/Twitter.png) top no-repeat;}
+a:hover.Twitter {background:url(file:///home/plenty/www/claire/asset/socialMediaCust/TwitterOver.png) top no-repeat;}
+a.facebook {width:42px; height:42px; background:url(file:///home/plenty/www/claire/asset/socialMediaCust/facebook.png) top no-repeat;}
+a:hover.facebook {background:url(file:///home/plenty/www/claire/asset/socialMediaCust/facebookOver.png) top no-repeat;}
+a.rss {width:42px; height:42px; background:url(file:///home/plenty/www/claire/asset/socialMediaCust/rss.png) top no-repeat;}
+a:hover.rss {background:url(file:///home/plenty/www/claire/asset/socialMediaCust/rssOver.png) top no-repeat;}
+a.email {width:42px; height:42px; background:url(file:///home/plenty/www/claire/asset/socialMediaCust/email.png) top no-repeat;}
+a:hover.email {background:url(file:///home/plenty/www/claire/asset/socialMediaCust/emailOver.png) top no-repeat;}
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+
+.footer {
+    clear: both;
+    border: 1px groove #aaaaaa;
+    background-color: rgb(74, 77, 80);
+    /*background: blue;*/
+    color: White;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    /*position: fixed;*/
+    bottom: 0px;
+    width: 100%;
+       
+
+}
+
+
+/*.footer {
+    background-color: rgb(74, 77, 80);
+    background-position: 0px -310px;
+    padding: 0px;
+    height: 5%;
+}*/
+
+/* end .footer-links */
+ /* .header-home {
+    background: url(../images/bg.jpg) 100% 100%;
+    background-position: 0px -310px; }
+*/
+  
